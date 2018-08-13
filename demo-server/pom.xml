@@ -1,0 +1,329 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.demo</groupId>
+  <artifactId>demo-server</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  	<modules>
+		<module>demo-facade</module>
+		<module>demo-service</module>
+		<module>demo-repository</module>
+		<module>demo-common</module>
+		<module>demo-domain</module>
+  	</modules>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<bs.domain.version>0.0.1-SNAPSHOT</bs.domain.version>
+		<bs.repository.version>0.0.1-SNAPSHOT</bs.repository.version>
+		<bs.common.version>0.0.1-SNAPSHOT</bs.common.version>
+		<bs.client.version>0.0.1-SNAPSHOT</bs.client.version>
+		<bs.service.version>0.0.1-SNAPSHOT</bs.service.version>
+
+
+		<mybatis.generator.version>1.3.2</mybatis.generator.version>
+		<mybatis.spring.boot>1.1.1</mybatis.spring.boot>
+		<mybatis.core.version>3.0</mybatis.core.version>
+		<mybatis.pageHepler.version>4.1.0</mybatis.pageHepler.version>
+		<druid.version>1.0.12</druid.version>
+		<mybatis.version>3.2.3</mybatis.version>
+		<mybatis.spring.version>1.2.2</mybatis.spring.version>
+		<guava.version>20.0</guava.version>
+		<apache.common.lang3.version>3.5</apache.common.lang3.version>
+		<velocity.version>1.7</velocity.version>
+		<velocity.tools.version>2.0</velocity.tools.version>
+		<velocity.boot.version>1.4.1.RELEASE</velocity.boot.version>
+		<flying.faucer.version>9.0.3</flying.faucer.version>
+		<zing.qr.code.version>3.2.1</zing.qr.code.version>
+		<aliyun.oss.version>2.7.0</aliyun.oss.version>
+		<okhttp.version>3.6.0</okhttp.version>
+		<mybatis.plus.version>2.1.1</mybatis.plus.version>
+		<alipay.fastjson.version>1.2.46</alipay.fastjson.version>
+		<apache.common.beans>1.8.3</apache.common.beans>
+		<mybatisplus-spring-boot-starter.version>1.0.4</mybatisplus-spring-boot-starter.version>
+		<sl4j.version>1.7.21</sl4j.version>
+		<spring.version>4.3.10.RELEASE</spring.version>
+		<spring.data.version>1.7.6.RELEASE</spring.data.version>
+
+		<github.page>4.1.0</github.page>
+		<tk.mybatis.version>3.5.0</tk.mybatis.version>
+		<mybatis.generator.version>1.3.2</mybatis.generator.version>
+		<auth.jwt.version>3.2.0</auth.jwt.version>
+		<imxyb.platform.version>0.0.1-SNAPSHOT</imxyb.platform.version>
+
+		<version.jwt.token>0.9.0</version.jwt.token>
+
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.6.RELEASE</version>
+	</parent>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.k12sss.boss</groupId>
+				<artifactId>bs-client</artifactId>
+				<version>${bs.client.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.k12sss.boss</groupId>
+				<artifactId>bs-common</artifactId>
+				<version>${bs.common.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.k12sss.boss</groupId>
+				<artifactId>bs-domain</artifactId>
+				<version>${bs.domain.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.k12sss.boss</groupId>
+				<artifactId>bs-repository</artifactId>
+				<version>${bs.repository.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.k12sss.boss</groupId>
+				<artifactId>bs-service</artifactId>
+				<version>${bs.service.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.imxyb</groupId>
+				<artifactId>pf-domain</artifactId>
+				<version>${imxyb.platform.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.SR3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-velocity</artifactId>
+				<version>${velocity.boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-redis</artifactId>
+				<version>${spring.data.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				<version>${mybatis.pageHepler.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${alipay.fastjson.version}</version>
+			</dependency>
+
+			<!--<dependency>-->
+			<!--<groupId>com.baomidou</groupId>-->
+			<!--<artifactId>mybatisplus-spring-boot-starter</artifactId>-->
+			<!--<version>${mybatisplus-spring-boot-starter.version}</version>-->
+			<!--</dependency>-->
+
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.spring.boot}</version>
+			</dependency>
+
+			<!--<dependency>-->
+			<!--<groupId>com.baomidou</groupId>-->
+			<!--<artifactId>mybatis-plus</artifactId>-->
+			<!--<version>${mybatis.plus.version}</version>-->
+			<!--</dependency>-->
+
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${apache.common.lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${apache.common.beans}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-pdf-itext5</artifactId>
+				<version>${flying.faucer.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cn.soeasypay.datacenter</groupId>
+				<artifactId>service</artifactId>
+				<version>${soeasypay.datacenter.service}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>core</artifactId>
+				<version>${zing.qr.code.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.aliyun.oss</groupId>
+				<artifactId>aliyun-sdk-oss</artifactId>
+				<version>${aliyun.oss.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${sl4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				<version>${github.page}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>tk.mybatis</groupId>
+				<artifactId>mapper</artifactId>
+				<version>${tk.mybatis.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-core</artifactId>
+				<version>${mybatis.generator.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.auth0</groupId>
+				<artifactId>java-jwt</artifactId>
+				<version>${auth.jwt.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt</artifactId>
+				<version>${version.jwt.token}</version>
+			</dependency>
+
+
+
+
+		</dependencies>
+	</dependencyManagement>
+
+
+	<build>
+		<finalName>xyb_boss_server</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+					<configurationFile>generator/mybatis-generator-config.xml</configurationFile>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- nexus私服配置 -->
+	<repositories>
+
+
+		<repository>
+			<id>nexus</id>
+			<name>Nexus Repository</name>
+			<url>http://repo.qtonecloud.cn/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<!--snapshots默认是关闭的,需要开启  -->
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>nexus1</id>
+			<name>Nexus</name>
+			<url>http://172.23.62.183:8081/nexus/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<!--snapshots默认是关闭的,需要开启  -->
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
