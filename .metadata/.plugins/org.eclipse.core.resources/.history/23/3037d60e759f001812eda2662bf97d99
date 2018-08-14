@@ -1,0 +1,51 @@
+server:
+  port: 80
+  
+jdbc-router:
+  master:
+    name: master
+    url: jdbc:mysql://192.168.5.134:3306/myboot #?useUnicode=true
+    username: root
+    password: 123456
+  slave:
+    name: slave
+    url: jdbc:mysql://192.168.5.134:3306/myboot #?useUnicode=true
+    username: root
+    password: 123456
+
+  datasource:
+      driverClass: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      initalSize: 5
+      minIdle: 5
+      maxActive: 20
+      testOnBorrow: true
+      filters: stat,wall
+      
+# spring
+spring:
+    profiles:
+      active: local
+    aop:
+      proxy-target-class: true
+    jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8 
+
+#redis
+    redis:
+      database: 0
+      host: r-bp168de600071c84.redis.rds.aliyuncs.com
+      port: 6379
+      password: Dbm8tUxoEZE7RCW0
+    timeout: 6000000
+    pool:
+       max-active: 8
+       max-wait: -1
+       max-idle: 8
+       min-idle: 0
+  
+logging:
+  level:
+    root: debug
+  

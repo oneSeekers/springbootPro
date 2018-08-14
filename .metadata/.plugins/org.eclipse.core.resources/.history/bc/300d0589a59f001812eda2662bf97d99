@@ -1,0 +1,5 @@
+package com.demo.facade.config;
+
+public class ActivemqConfig {
+
+}

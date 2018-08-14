@@ -32,7 +32,7 @@
         </javaClientGenerator>
         
 
-         <table schema="public" tableName="mb_user" domainObjectName="User"></table>
+         <table schema="public" tableName="mb_pass_search" domainObjectName="PassSearch"></table>
 
     </context>
 </generatorConfiguration>

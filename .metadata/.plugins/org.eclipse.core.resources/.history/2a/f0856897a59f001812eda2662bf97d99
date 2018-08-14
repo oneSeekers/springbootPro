@@ -1,0 +1,12 @@
+package com.demo.facade.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ActivemqConfig {
+
+	 @Bean
+	    public Queue queue() {
+	        return new ActiveMQQueue("sample.queue");
+	    }
+}

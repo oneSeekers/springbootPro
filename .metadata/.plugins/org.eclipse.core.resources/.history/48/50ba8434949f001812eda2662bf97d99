@@ -1,0 +1,21 @@
+package com.demo.facade.data.output;
+
+/**
+ * 服务器发给浏览器
+ * @author Administrator
+ *
+ */
+public class WebsocketOutputDTO {
+	
+	private String response;
+
+	public String getResponse() {
+		return response;
+	}
+
+	public void setResponse(String response) {
+		this.response = response;
+	}
+	
+
+}

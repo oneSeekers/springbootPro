@@ -1,0 +1,13 @@
+package com.demo.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.repository.dao.PassSearchDao;
+import com.demo.service.PassSearchService;
+
+@Service
+public class PassSearchServiceImpl implements PassSearchService{
+
+	@Autowired
+	private PassSearchDao passSearchDao;
+}

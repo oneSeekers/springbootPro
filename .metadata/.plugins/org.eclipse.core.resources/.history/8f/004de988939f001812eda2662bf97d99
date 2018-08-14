@@ -1,0 +1,5 @@
+package com.demo.facade.data.output;
+
+public class WebsocketOutputDTO {
+
+}

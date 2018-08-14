@@ -31,7 +31,23 @@ spring:
     jackson:
       date-format: yyyy-MM-dd HH:mm:ss
       time-zone: GMT+8 
-
+    activemq:
+      in-memory: true
+      pool:
+        enabled: false
+    
+#redis
+    redis:
+      database: 0
+      host: 192.168.5.134
+      port: 6379
+      password: redis
+    timeout: 6000000
+    pool:
+       max-active: 8
+       max-wait: -1
+       max-idle: 8
+       min-idle: 0
   
 logging:
   level:

@@ -1,0 +1,9 @@
+package com.demo.facade.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ActivemqConfig {
+
+	
+}

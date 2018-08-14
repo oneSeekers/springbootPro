@@ -1,0 +1,5 @@
+package com.demo.facade.data.input;
+
+public class WebsocketInputDTO {
+
+}

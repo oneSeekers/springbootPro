@@ -1,0 +1,13 @@
+package com.demo.service.impl;
+
+import javax.websocket.server.ServerEndpoint;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.service.ChatRoomServerEndpoint;
+
+@ServerEndpoint(value = "")
+@Service
+public class ChatRoomServerEndpointImpl implements ChatRoomServerEndpoint {
+
+}

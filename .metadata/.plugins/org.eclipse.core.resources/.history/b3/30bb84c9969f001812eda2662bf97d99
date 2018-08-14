@@ -1,0 +1,13 @@
+package com.demo.repository.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.demo.repository.mapper.PassSearchMapper;
+
+@Repository
+public class PassSearchDao {
+
+	@Autowired 
+	private PassSearchMapper passSearchMapper;
+}

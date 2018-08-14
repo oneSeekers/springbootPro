@@ -1,0 +1,20 @@
+package com.demo.facade.data.input;
+
+/**
+ * 浏览器发给服务器
+ * @author Administrator
+ *
+ */
+public class WebsocketInputDTO {
+
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

@@ -1,0 +1,76 @@
+package com.demo.common.utils;
+
+import java.security.MessageDigest;
+import java.util.Base64;
+
+/**
+ * 加密解密
+ * @author liuhongfei
+ *
+ */
+public class Encryption {
+
+	/**
+	 * 解密
+	 * @param key
+	 * @return
+	 */
+	public static String decryptBASE64(String key) {
+		return new String(Base64.getDecoder().decode(key.getBytes()));
+	}
+	
+	/**
+	 * 加密
+	 * @param key
+	 * @return
+	 */
+	public static String encryptBASE64(String key) {
+		return Base64.getEncoder().encodeToString(key.getBytes());
+	}
+	
+	/**
+	 * MD5
+	 * @param inStr
+	 * @return
+	 */
+	public static String getMD5(String inStr) {
+		MessageDigest md5 = null;
+		try {
+			md5 = MessageDigest.getInstance("MD5");
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			return "";
+		}
+		char[] charArray = inStr.toCharArray();
+		byte[] byteArray = new byte[charArray.length];
+
+		for (int i = 0; i < charArray.length; i++)
+			byteArray[i] = (byte) charArray[i];
+
+		byte[] md5Bytes = md5.digest(byteArray);
+
+		StringBuffer hexValue = new StringBuffer();
+
+		for (int i = 0; i < md5Bytes.length; i++) {
+			int val = ((int) md5Bytes[i]) & 0xff;
+			if (val < 16)
+				hexValue.append("0");
+			hexValue.append(Integer.toHexString(val));
+		}
+
+		return hexValue.toString();
+	}
+	
+	public static void main(String[] args) {
+		String str = "eyJyb2xlIjoiIiwidW5pcXVlX25hbWUiOiLlvKDkuIkiLCJ1c2VyaWQiOiIxIiwiaWF0IjoxNTMyOTE3NzMwLCJpc3MiOiJyZXN0YXBpdXNlciIsImF1ZCI6IjA5OGY2YmNkNDYyMWQzNzNjYWRlNGU4MzI2MjdiNGY2In0";
+		String encrypt = Encryption.encryptBASE64(str);
+		String decrypt = Encryption.decryptBASE64(str);
+		System.out.println(str);
+		System.out.println(encrypt);
+		System.out.println(decrypt);
+		
+		String str1 = "GFyVwc6Hzasv4dsPdS3lQ14UabPupMamL91XuMmP9nI";
+		System.out.println(Encryption.decryptBASE64(str1));
+	}
+}

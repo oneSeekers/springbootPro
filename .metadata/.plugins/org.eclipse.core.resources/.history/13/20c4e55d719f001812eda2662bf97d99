@@ -1,0 +1,12 @@
+package com.demo.service;
+
+import org.springframework.cache.annotation.Cacheable;
+
+import com.demo.repository.entity.User;
+import com.github.pagehelper.PageInfo;
+
+public interface UserService {
+	
+	@Cacheable(cacheNames="users")
+	public PageInfo<User> findAll();
+}

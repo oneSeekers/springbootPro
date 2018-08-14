@@ -1,0 +1,5 @@
+package com.demo.facade.common;
+
+public class LoginInterceptor extends HandlerInterceptor{
+
+}

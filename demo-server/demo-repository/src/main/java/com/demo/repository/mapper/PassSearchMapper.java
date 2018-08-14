@@ -1,0 +1,11 @@
+package com.demo.repository.mapper;
+
+import java.util.List;
+
+import com.demo.repository.common.mapper.DemoMapper;
+import com.demo.repository.entity.PassSearch;
+
+public interface PassSearchMapper extends DemoMapper<PassSearch> {
+	
+	public List<PassSearch> selectList();
+}

@@ -36,7 +36,8 @@
     </plugins>
 
     <mappers>
-        <!-- <mapper resource="mybatis/BillMapper.xml" /> -->
+    	<!-- 这样配置很麻烦，直接在application.yml中配置或者注解配置 -->
+        <!-- <mapper resource="mybatis/PassSearchMapper.xml" /> -->
         <package name="mybatis"/>
     </mappers>
 

@@ -1,0 +1,5 @@
+package com.demo.facade.web.componet;
+
+public class Consumer {
+
+}

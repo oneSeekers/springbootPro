@@ -1,0 +1,9 @@
+package com.demo.facade.web.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@ReuqestMapping("/web/socket")
+public class WebsocketController {
+
+}

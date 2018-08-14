@@ -1,0 +1,10 @@
+package com.demo.repository.dao;
+
+import com.demo.repository.mapper.PassSearchMapper;
+
+@Repository
+public class PassSearchDao {
+
+	@Autowired 
+	private PassSearchMapper passSearchMapper;
+}

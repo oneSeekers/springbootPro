@@ -1,0 +1,8 @@
+package com.demo.facade.web.componet;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Consumer {
+
+}
