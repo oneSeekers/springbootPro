@@ -1,0 +1,7 @@
+package com.imxyb.boss.repository.mapper;
+
+import com.imxyb.boss.repository.common.mapper.PlatformMapper;
+import com.imxyb.boss.repository.entity.ActivityRedPacket;
+
+public interface ActivityRedPacketMapper extends PlatformMapper<ActivityRedPacket> {
+}

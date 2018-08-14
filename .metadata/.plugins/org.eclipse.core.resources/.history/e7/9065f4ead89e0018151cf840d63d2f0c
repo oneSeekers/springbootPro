@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo.repository.mapper.ActivityRedPacketMapper" >
+  <resultMap id="BaseResultMap" type="com.demo.repository.entity.ActivityRedPacket" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="redpacket_no" property="redpacketNo" jdbcType="VARCHAR" />
+    <result column="activity_id" property="activityId" jdbcType="BIGINT" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="merchant_id" property="merchantId" jdbcType="INTEGER" />
+    <result column="merchant_name" property="merchantName" jdbcType="VARCHAR" />
+    <result column="efficient_time" property="efficientTime" jdbcType="TIMESTAMP" />
+    <result column="money" property="money" jdbcType="DECIMAL" />
+    <result column="valid" property="valid" jdbcType="BIT" />
+    <result column="completed_status" property="completedStatus" jdbcType="INTEGER" />
+    <result column="transfer_status" property="transferStatus" jdbcType="INTEGER" />
+    <result column="transfer_time" property="transferTime" jdbcType="INTEGER" />
+    <result column="created_at" property="createdAt" jdbcType="INTEGER" />
+    <result column="updated_at" property="updatedAt" jdbcType="INTEGER" />
+    <result column="deleted_at" property="deletedAt" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

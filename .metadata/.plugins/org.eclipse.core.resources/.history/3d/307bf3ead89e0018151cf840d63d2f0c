@@ -1,0 +1,23 @@
+package com.demo.repository.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.demo.repository.entity.ActivityRedPacket;
+import com.demo.repository.mapper.ActivityRedPacketMapper;
+import com.github.pagehelper.PageInfo;
+
+@Repository
+public class ActivityRedPacketDao {
+
+	@Autowired
+	private ActivityRedPacketMapper activityRedPacketMapper;
+	
+	public PageInfo<ActivityRedPacket> list(){
+		List<ActivityRedPacket> list = activityRedPacketMapper.selectAll();
+		return new PageInfo<ActivityRedPacket>(list);
+	}
+	
+}

@@ -1,0 +1,22 @@
+package com.demo.facade.web.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.demo.common.web.response.WebResponse;
+import com.demo.service.UserService;
+
+@RestController
+@RequestMapping("/web/user")
+public class UserController {
+
+	@Autowired
+	private UserService userService;
+	
+	@PostMapping("/list")
+	public WebResponse list() {
+		return WebResponse.newCorrectResponse();
+	}
+}

@@ -1,0 +1,7 @@
+package com.demo.repository.mapper;
+
+import com.demo.repository.common.mapper.DemoMapper;
+import com.demo.repository.entity.ActivityRedPacket;
+
+public interface ActivityRedPacketMapper extends DemoMapper<ActivityRedPacket> {
+}

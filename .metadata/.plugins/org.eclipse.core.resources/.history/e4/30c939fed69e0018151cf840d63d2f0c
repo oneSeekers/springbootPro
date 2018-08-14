@@ -1,0 +1,14 @@
+package com.demo.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.repository.dao.ActivityRedPacketDao;
+import com.demo.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowried
+	private ActivityRedPacketDao activityRedPacketDao;
+
+}

@@ -1,0 +1,36 @@
+package com.imxyb.boss.repository.common.configuration;
+
+import com.imxyb.boss.repository.common.mapper.PlatformMapper;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import tk.mybatis.spring.mapper.MapperScannerConfigurer;
+
+import java.util.Properties;
+
+/**
+ * @author zuochi
+ * @version 1.0.0
+ * @date 2017/11/9
+ */
+
+@Configuration
+@AutoConfigureAfter(MybatisConfiguration.class)
+public class MybatisAutoScannerConfiguration {
+    @Bean
+    public MapperScannerConfigurer mapperScannerConfigurer() {
+        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
+
+        mapperScannerConfigurer.setBasePackage("cn.soeasypay.platform.repository.mapper");
+        mapperScannerConfigurer.setMarkerInterface(PlatformMapper.class);
+        mapperScannerConfigurer.setSqlSessionTemplateBeanName("sqlSessionTemplate");
+
+        Properties properties = new Properties();
+        // 数据库驼峰命名的时候开启，否则关闭
+        properties.setProperty("style","normal");
+
+        mapperScannerConfigurer.setProperties(properties);
+
+        return mapperScannerConfigurer;
+    }
+}

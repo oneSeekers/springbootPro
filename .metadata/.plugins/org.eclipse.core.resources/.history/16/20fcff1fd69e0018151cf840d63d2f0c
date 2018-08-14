@@ -1,0 +1,5 @@
+package com.demo.repository.common.mapper;
+
+public interface DemoMapper {
+
+}

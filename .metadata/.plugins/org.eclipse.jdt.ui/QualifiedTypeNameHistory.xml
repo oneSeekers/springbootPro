@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="com.demo.repository.common.db.enums.DataSourceTarget"/>
-<fullyQualifiedTypeName name="com.demo.common.page.PageInfo"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.demo.common.page.Pagination"/>
 <fullyQualifiedTypeName name="com.demo.common.web.exception.enums.WebErrCode"/>
@@ -16,4 +15,16 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="com.demo.common.web.response.WebResponse"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="tk.mybatis.mapper.additional.insert.InsertListMapper"/>
+<fullyQualifiedTypeName name="com.demo.repository.common.mapper.DemoMapper"/>
+<fullyQualifiedTypeName name="com.demo.repository.mapper.ActivityRedPacketMapper"/>
+<fullyQualifiedTypeName name="com.demo.repository.dao.ActivityRedPacketDao"/>
+<fullyQualifiedTypeName name="com.demo.repository.entity.ActivityRedPacket"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.AutoConfigureAfter"/>
+<fullyQualifiedTypeName name="com.imxyb.boss.repository.common.configuration.MybatisConfiguration"/>
+<fullyQualifiedTypeName name="com.demo.repository.mapper.UserMapper"/>
+<fullyQualifiedTypeName name="com.github.pagehelper.PageInfo"/>
+<fullyQualifiedTypeName name="com.demo.repository.entity.User"/>
+<fullyQualifiedTypeName name="com.demo.common.page.PageInfo"/>
 </qualifiedTypeNameHistroy>

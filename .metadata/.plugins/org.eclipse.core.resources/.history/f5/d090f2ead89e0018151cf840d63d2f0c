@@ -1,0 +1,317 @@
+package com.demo.repository.entity;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import javax.persistence.*;
+
+@Table(name = "activity_redpacket")
+public class ActivityRedPacket {
+    @Id
+    private Long id;
+
+    /**
+     * 红包唯一编号
+     */
+    @Column(name = "redpacket_no")
+    private String redpacketNo;
+
+    @Column(name = "activity_id")
+    private Long activityId;
+
+    @Column(name = "user_id")
+    private Integer userId;
+
+    /**
+     * 商户id
+     */
+    @Column(name = "merchant_id")
+    private Integer merchantId;
+
+    @Column(name = "merchant_name")
+    private String merchantName;
+
+    /**
+     * 生效时间
+     */
+    @Column(name = "efficient_time")
+    private Date efficientTime;
+
+    /**
+     * 金额
+     */
+    private BigDecimal money;
+
+    /**
+     * false 失效 true 生效
+     */
+    private Boolean valid;
+
+    /**
+     * 0 未完成 1 已经完成 
+     */
+    @Column(name = "completed_status")
+    private Integer completedStatus;
+
+    /**
+     * 0 未打款 1 已打款
+     */
+    @Column(name = "transfer_status")
+    private Integer transferStatus;
+
+    /**
+     * 红包发放时间
+     */
+    @Column(name = "transfer_time")
+    private Integer transferTime;
+
+    @Column(name = "created_at")
+    private Integer createdAt;
+
+    @Column(name = "updated_at")
+    private Integer updatedAt;
+
+    @Column(name = "deleted_at")
+    private Integer deletedAt;
+
+    /**
+     * @return id
+     */
+    public Long getId() {
+        return id;
+    }
+
+    /**
+     * @param id
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    /**
+     * 获取红包唯一编号
+     *
+     * @return redpacket_no - 红包唯一编号
+     */
+    public String getRedpacketNo() {
+        return redpacketNo;
+    }
+
+    /**
+     * 设置红包唯一编号
+     *
+     * @param redpacketNo 红包唯一编号
+     */
+    public void setRedpacketNo(String redpacketNo) {
+        this.redpacketNo = redpacketNo == null ? null : redpacketNo.trim();
+    }
+
+    /**
+     * @return activity_id
+     */
+    public Long getActivityId() {
+        return activityId;
+    }
+
+    /**
+     * @param activityId
+     */
+    public void setActivityId(Long activityId) {
+        this.activityId = activityId;
+    }
+
+    /**
+     * @return user_id
+     */
+    public Integer getUserId() {
+        return userId;
+    }
+
+    /**
+     * @param userId
+     */
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    /**
+     * 获取商户id
+     *
+     * @return merchant_id - 商户id
+     */
+    public Integer getMerchantId() {
+        return merchantId;
+    }
+
+    /**
+     * 设置商户id
+     *
+     * @param merchantId 商户id
+     */
+    public void setMerchantId(Integer merchantId) {
+        this.merchantId = merchantId;
+    }
+
+    /**
+     * @return merchant_name
+     */
+    public String getMerchantName() {
+        return merchantName;
+    }
+
+    /**
+     * @param merchantName
+     */
+    public void setMerchantName(String merchantName) {
+        this.merchantName = merchantName == null ? null : merchantName.trim();
+    }
+
+    /**
+     * 获取生效时间
+     *
+     * @return efficient_time - 生效时间
+     */
+    public Date getEfficientTime() {
+        return efficientTime;
+    }
+
+    /**
+     * 设置生效时间
+     *
+     * @param efficientTime 生效时间
+     */
+    public void setEfficientTime(Date efficientTime) {
+        this.efficientTime = efficientTime;
+    }
+
+    /**
+     * 获取金额
+     *
+     * @return money - 金额
+     */
+    public BigDecimal getMoney() {
+        return money;
+    }
+
+    /**
+     * 设置金额
+     *
+     * @param money 金额
+     */
+    public void setMoney(BigDecimal money) {
+        this.money = money;
+    }
+
+    /**
+     * 获取false 失效 true 生效
+     *
+     * @return valid - false 失效 true 生效
+     */
+    public Boolean getValid() {
+        return valid;
+    }
+
+    /**
+     * 设置false 失效 true 生效
+     *
+     * @param valid false 失效 true 生效
+     */
+    public void setValid(Boolean valid) {
+        this.valid = valid;
+    }
+
+    /**
+     * 获取0 未完成 1 已经完成 
+     *
+     * @return completed_status - 0 未完成 1 已经完成 
+     */
+    public Integer getCompletedStatus() {
+        return completedStatus;
+    }
+
+    /**
+     * 设置0 未完成 1 已经完成 
+     *
+     * @param completedStatus 0 未完成 1 已经完成 
+     */
+    public void setCompletedStatus(Integer completedStatus) {
+        this.completedStatus = completedStatus;
+    }
+
+    /**
+     * 获取0 未打款 1 已打款
+     *
+     * @return transfer_status - 0 未打款 1 已打款
+     */
+    public Integer getTransferStatus() {
+        return transferStatus;
+    }
+
+    /**
+     * 设置0 未打款 1 已打款
+     *
+     * @param transferStatus 0 未打款 1 已打款
+     */
+    public void setTransferStatus(Integer transferStatus) {
+        this.transferStatus = transferStatus;
+    }
+
+    /**
+     * 获取红包发放时间
+     *
+     * @return transfer_time - 红包发放时间
+     */
+    public Integer getTransferTime() {
+        return transferTime;
+    }
+
+    /**
+     * 设置红包发放时间
+     *
+     * @param transferTime 红包发放时间
+     */
+    public void setTransferTime(Integer transferTime) {
+        this.transferTime = transferTime;
+    }
+
+    /**
+     * @return created_at
+     */
+    public Integer getCreatedAt() {
+        return createdAt;
+    }
+
+    /**
+     * @param createdAt
+     */
+    public void setCreatedAt(Integer createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    /**
+     * @return updated_at
+     */
+    public Integer getUpdatedAt() {
+        return updatedAt;
+    }
+
+    /**
+     * @param updatedAt
+     */
+    public void setUpdatedAt(Integer updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    /**
+     * @return deleted_at
+     */
+    public Integer getDeletedAt() {
+        return deletedAt;
+    }
+
+    /**
+     * @param deletedAt
+     */
+    public void setDeletedAt(Integer deletedAt) {
+        this.deletedAt = deletedAt;
+    }
+}

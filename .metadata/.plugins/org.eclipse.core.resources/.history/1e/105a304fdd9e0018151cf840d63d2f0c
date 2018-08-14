@@ -1,0 +1,13 @@
+package com.demo.repository.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.demo.repository.mapper.UserMapper;
+
+@Repository
+public class UserDao {
+	
+	@Autowired
+	private UserMapper userMapper;
+
+}
